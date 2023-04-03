@@ -10,9 +10,7 @@ import "./hero-slide.scss";
 import HeroSlideItem from "./HeroSlideItem";
 import TrialModal from "./TrialModal";
 
-interface IProps {}
-
-const HeroSlide: FC<IProps> = () => {
+const HeroSlide: FC = () => {
 	const [movieItems, setMovieItems] = useState<ResultResponseMovie[]>([]);
 
 	useEffect(() => {
@@ -21,7 +19,7 @@ const HeroSlide: FC<IProps> = () => {
 
 			try {
 				const response = await tmdbApi.getMoviesList(movieType.popular, {
-					params,
+					params
 				});
 
 				if (response.data) {
@@ -42,11 +40,11 @@ const HeroSlide: FC<IProps> = () => {
 				centeredSlides={true}
 				autoplay={{
 					delay: 5000,
-					disableOnInteraction: false,
+					disableOnInteraction: false
 				}}
 				modules={[Autoplay]}
-				className="mySwiper"
-				style={{height: '100vh'}}
+				className='mySwiper'
+				style={{ height: "100vh" }}
 			>
 				{movieItems.map((item) => (
 					<SwiperSlide key={item.id}>

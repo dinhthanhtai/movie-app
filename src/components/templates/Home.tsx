@@ -1,4 +1,3 @@
-import React from "react";
 import { Link, Outlet } from "react-router-dom";
 import { Button } from "../atoms";
 
@@ -15,7 +14,7 @@ const Home = () => {
 				<div className='section mb-3'>
 					<div className='section--header mb-2'>
 						<h2> Trending Movies </h2>
-						<Link to="/movie">
+						<Link to='/movie'>
 							<Button outLine className='small'>
 								View More
 							</Button>
@@ -26,7 +25,7 @@ const Home = () => {
 				<div className='section mb-3'>
 					<div className='section--header mb-2'>
 						<h2> Top Rated Movies </h2>
-						<Link to="/tv">
+						<Link to='/tv'>
 							<Button outLine className='small'>
 								View More
 							</Button>

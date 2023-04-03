@@ -1,21 +1,20 @@
-import 'swiper/css';
-import './App.scss';
+import "swiper/css";
+import "./App.scss";
 
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter } from "react-router-dom";
 
-import { Header, Footer } from './components/organisms';
+import { Header, Footer } from "./components/organisms";
 
-import RoutesConfig from './routes/Routes';
+import RoutesConfig from "./routes/Routes";
 
 function App() {
-
-  return (
-    <BrowserRouter>
-      <Header />
-      <RoutesConfig />
-      <Footer />
-    </BrowserRouter>
-  )
+	return (
+		<BrowserRouter>
+			<Header />
+			<RoutesConfig />
+			<Footer />
+		</BrowserRouter>
+	);
 }
 
-export default App
+export default App;

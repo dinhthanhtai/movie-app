@@ -10,7 +10,7 @@ interface IProps {
 
 const PageHeader: FC<IProps> = ({ children }) => {
 	return (
-		<div className="page-header" style={{ background: `url(${bg})` }}>
+		<div className='page-header' style={{ background: `url(${bg})` }}>
 			<h2>{children}</h2>
 		</div>
 	);

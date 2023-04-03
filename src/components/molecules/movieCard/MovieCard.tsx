@@ -1,10 +1,10 @@
-import { FC, forwardRef } from "react";
+import { forwardRef } from "react";
 import { Link } from "react-router-dom";
 import { BiPlay } from "react-icons/bi";
 
 import apiConfig from "@/api/apiConfig";
 import { Button } from "@/components/atoms";
-import { category, ResultResponseMovie, TCate } from "@/api/tmdbApi";
+import { ResultResponseMovie, TCate } from "@/api/tmdbApi";
 
 import "./movieCard.scss";
 
@@ -25,7 +25,7 @@ const MovieCard = forwardRef<HTMLDivElement, IProps>(
 			<Link to={link}>
 				<div
 					ref={ref}
-					className="movie-card"
+					className='movie-card'
 					style={{ backgroundImage: `url(${bg})` }}
 				>
 					<Button>
@@ -35,7 +35,9 @@ const MovieCard = forwardRef<HTMLDivElement, IProps>(
 				<h3> {title || name} </h3>
 			</Link>
 		);
-	},
+	}
 );
+
+MovieCard.displayName = "MovieCard";
 
 export default MovieCard;

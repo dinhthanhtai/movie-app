@@ -1,3 +1,3 @@
-export { default as Header } from './header/Header';
-export { default as Footer } from './footer/Footer';
-export { default as MovieList } from './movieList/MovieList';
+export { default as Header } from "./header/Header";
+export { default as Footer } from "./footer/Footer";
+export { default as MovieList } from "./movieList/MovieList";

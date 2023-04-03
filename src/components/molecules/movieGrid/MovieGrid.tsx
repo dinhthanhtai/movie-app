@@ -1,13 +1,12 @@
-import { FC, useState, useRef, useCallback, useEffect } from "react";
+import { FC, useState, useRef, useEffect } from "react";
 import useSearch from "@/utils/useSearch/useSearch";
 
-import tmdbApi, { movieType, ResultResponseMovie, TCate } from "@/api/tmdbApi";
-
-import "./movieGrid.scss";
 import MovieCard from "../movieCard/MovieCard";
 import MovieSearch from "../movieSearch/MovieSearch";
 import { Spin } from "@/components/atoms";
-import axios from "axios";
+import { TCate } from "@/api/tmdbApi";
+
+import "./movieGrid.scss";
 
 interface IProps {
 	category: TCate;
@@ -19,10 +18,10 @@ const MovieGrid: FC<IProps> = ({ category }) => {
 	const [lastElement, setLastElement] = useState<HTMLDivElement | null>(null);
 
 	const resultsSearch = useSearch(query, page, category);
-	const {items, loading} = resultsSearch;
+	const { items, loading } = resultsSearch;
 
 	const onSearch = (event: React.ChangeEvent<HTMLInputElement>) => {
-		setQuery(event.target.value)
+		setQuery(event.target.value);
 		setPage(1);
 	};
 
@@ -52,11 +51,11 @@ const MovieGrid: FC<IProps> = ({ category }) => {
 
 	return (
 		<>
-			<div className="section mb-3">
+			<div className='section mb-3'>
 				<MovieSearch onChange={onSearch} category={category} keyword={query} />
 			</div>
-			<div className="section mb-3">
-				<div className="movie-grid" key={category}>
+			<div className='section mb-3'>
+				<div className='movie-grid' key={category}>
 					{items.map((item, idx) => (
 						<MovieCard
 							ref={setLastElement}
@@ -66,7 +65,7 @@ const MovieGrid: FC<IProps> = ({ category }) => {
 						/>
 					))}
 				</div>
-				{ loading && <Spin />}
+				{loading && <Spin />}
 			</div>
 		</>
 	);
