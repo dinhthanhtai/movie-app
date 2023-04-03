@@ -6,15 +6,15 @@ import MovieGrid from "../molecules/movieGrid/MovieGrid";
 
 const Catalog = () => {
 	const { pathname } = useLocation();
-	let category = pathname.slice(1);
+	const category = pathname.slice(1);
 
 	return (
 		<>
 			<PageHeader>
 				{category === cate.movie ? "Movies" : "TV Series"}
 			</PageHeader>
-			<div className="container">
-				<div className="section mb-3">
+			<div className='container'>
+				<div className='section mb-3'>
 					<MovieGrid key={category} category={category as TCate} />
 				</div>
 			</div>

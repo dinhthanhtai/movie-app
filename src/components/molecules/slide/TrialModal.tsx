@@ -23,7 +23,7 @@ const TrialModal: FC<IProps> = ({ item }) => {
 
 	return (
 		<Modal onClose={onClose} open={false} id={id}>
-			<iframe ref={iframeRef} width="100%" height="500px" title='trailer' />
+			<iframe ref={iframeRef} width='100%' height='500px' title='trailer' />
 		</Modal>
 	);
 };

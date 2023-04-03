@@ -6,7 +6,7 @@ import tmdbApi, {
 	TCate,
 	TMovieType,
 	TtvType,
-	ResultResponseMovie,
+	ResultResponseMovie
 } from "@/api/tmdbApi";
 
 import "./movieList.scss";
@@ -20,7 +20,7 @@ interface IProps {
 
 const MovieList: FC<IProps> = ({ type, category, id }) => {
 	const [items, setItems] = useState<ResultResponseMovie[]>([]);
-	console.log("🚀 ~ file: MovieList.tsx:23 ~ items:", items)
+	console.log("🚀 ~ file: MovieList.tsx:23 ~ items:", items);
 
 	useEffect(() => {
 		const getList = async () => {
@@ -31,13 +31,13 @@ const MovieList: FC<IProps> = ({ type, category, id }) => {
 				response = await tmdbApi.similar(category, id || "");
 			} else {
 				switch (category) {
-					case "movie":
-						response = await tmdbApi.getMoviesList(type as TMovieType, {
-							params,
-						});
-						break;
-					default:
-						response = await tmdbApi.getTvList(type as TtvType, { params });
+				case "movie":
+					response = await tmdbApi.getMoviesList(type as TMovieType, {
+						params
+					});
+					break;
+				default:
+					response = await tmdbApi.getTvList(type as TtvType, { params });
 				}
 			}
 			setItems(response.data.results);
@@ -53,7 +53,7 @@ const MovieList: FC<IProps> = ({ type, category, id }) => {
 				spaceBetween={10}
 				slidesPerView='auto'
 				modules={[Autoplay]}
-				className="mySwiper"
+				className='mySwiper'
 			>
 				{items.map((item) => (
 					<SwiperSlide key={item.id}>
