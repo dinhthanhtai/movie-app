@@ -20,7 +20,6 @@ interface IProps {
 
 const MovieList: FC<IProps> = ({ type, category, id }) => {
 	const [items, setItems] = useState<ResultResponseMovie[]>([]);
-	console.log("🚀 ~ file: MovieList.tsx:23 ~ items:", items);
 
 	useEffect(() => {
 		const getList = async () => {

@@ -12,7 +12,6 @@ interface IProps {
 
 const CastList: FC<IProps> = ({ id, category }) => {
 	const [casts, setCasts] = useState<CastResponse[]>([]);
-	console.log("🚀 ~ file: CastList.tsx:16 ~ casts:", casts);
 
 	useEffect(() => {
 		const getCredits = async () => {
@@ -28,7 +27,6 @@ const CastList: FC<IProps> = ({ id, category }) => {
 		<div className='casts'>
 			{casts.map((item, i) => {
 				const url = apiConfig.w500Image(item.profile_path);
-				console.log(url);
 
 				return (
 					<div key={i} className='casts__item'>
