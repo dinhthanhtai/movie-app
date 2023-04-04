@@ -52,7 +52,7 @@ const MovieGrid: FC<IProps> = ({ category }) => {
 	return (
 		<>
 			<div className='section mb-3'>
-				<MovieSearch onChange={onSearch} category={category} keyword={query} />
+				<MovieSearch onChange={onSearch} keyword={query} />
 			</div>
 			<div className='section mb-3'>
 				<div className='movie-grid' key={category}>
