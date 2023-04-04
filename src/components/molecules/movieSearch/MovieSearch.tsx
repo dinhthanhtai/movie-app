@@ -1,10 +1,10 @@
 import { FC } from "react";
 
 import { Button, Input } from "@/components/atoms";
-import { TCate } from "@/api/tmdbApi";
+
+import "./movieSearch.scss";
 
 interface IProps {
-	category: TCate;
 	keyword: string;
 	onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
 	onClick?: () => void;

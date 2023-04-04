@@ -5,7 +5,7 @@ import "./input.scss";
 interface IProps {
 	type: string;
 	placeholder: string;
-	value: string;
+	value?: string;
 	onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
