@@ -7,6 +7,7 @@ import { Spin } from "@/components/atoms";
 import { TCate } from "@/api/tmdbApi";
 
 import "./movieGrid.scss";
+import React from "react";
 
 interface IProps {
 	category: TCate;
